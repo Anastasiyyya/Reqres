@@ -12,6 +12,7 @@ import static org.hamcrest.Matchers.*;
 public class ReqResTest {
 
     public static final String BASE_URL = "https://reqres.in/api/";
+    public static final String AVATAR_URL = "https://reqres.in/img/faces/7-image.jpg";
 
     /**
      * This test checks status code and all exist fields of the first user
@@ -31,7 +32,7 @@ public class ReqResTest {
         Assert.assertEquals(listOfUsers.getData().get(0).getEmail(), "michael.lawson@reqres.in");
         Assert.assertEquals(listOfUsers.getData().get(0).getFirstName(), "Michael");
         Assert.assertEquals(listOfUsers.getData().get(0).getLastName(), "Lawson");
-        Assert.assertEquals(listOfUsers.getData().get(0).getAvatar(), "https://reqres.in/img/faces/7-image.jpg");
+        Assert.assertEquals(listOfUsers.getData().get(0).getAvatar(), AVATAR_URL);
     }
 
     /**
